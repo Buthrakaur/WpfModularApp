@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="WpfModularApp.Person.Views.PersonListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:cal="http://www.caliburnproject.org"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:model="clr-namespace:WpfModularApp.Person.Model"
+             xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        
+        
+        <collections:ArrayList x:Key="people">
+            <model:Person>
+                <model:Person.Id>1</model:Person.Id>
+                <model:Person.Name>name 1</model:Person.Name>
+                <model:Person.Address>
+                    <model:Address>
+                        <model:Address.City>city 1</model:Address.City>
+                        <model:Address.Street>street 1</model:Address.Street>
+                    </model:Address>
+                </model:Person.Address>
+            </model:Person>
+        </collections:ArrayList>
+    </UserControl.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Label>Name:</Label>
+            <TextBox Text="{Binding FilterName}" Width="100"/>
+            <Label>City:</Label>
+            <TextBox Text="{Binding FilterCity}" Width="100"/>
+            <Button cal:Message.Attach="ExecuteFilter">Search</Button>
+        </StackPanel>
+        <!--<ListView ItemsSource="{StaticResource people}">-->
+        <ListView ItemsSource="{Binding People}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" Width="30" DisplayMemberBinding="{Binding Id}"/>
+                    <GridViewColumn Header="Name" Width="100" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Street" Width="100" DisplayMemberBinding="{Binding Address.Street}"/>
+                    <GridViewColumn Header="City" Width="100" DisplayMemberBinding="{Binding Address.City}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</UserControl>
