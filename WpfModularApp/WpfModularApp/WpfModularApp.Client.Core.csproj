@@ -70,13 +70,9 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xaml">
-      <RequiredTargetFramework>4.0</RequiredTargetFramework>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -117,10 +113,18 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WpfModularApp.Person\WpfModularApp.Person.csproj">
+      <Project>{244426F9-12E2-4423-866E-C70F8069D714}</Project>
+      <Name>WpfModularApp.Person</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WpfModularApp.Product\WpfModularApp.Product.csproj">
       <Project>{76DD7C75-9E77-49DD-9589-0F54BE28099F}</Project>
       <Name>WpfModularApp.Product</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
