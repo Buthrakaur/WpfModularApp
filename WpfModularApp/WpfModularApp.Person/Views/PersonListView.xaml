@@ -13,7 +13,6 @@
         
         <collections:ArrayList x:Key="people">
             <model:Person>
-                <model:Person.Id>1</model:Person.Id>
                 <model:Person.Name>name 1</model:Person.Name>
                 <model:Person.Address>
                     <model:Address>

@@ -18,7 +18,7 @@ namespace WpfModularApp
 
         protected override Microsoft.Practices.ServiceLocation.IServiceLocator CreateContainer()
         {
-            return Caliburn.Castle.WindsorAdapter(container);
+            return new Caliburn.Castle.WindsorAdapter(container);
         }
 
         protected override object CreateRootModel()
