@@ -17,8 +17,8 @@ namespace WpfModularApp.Person.Service
         public IEnumerable<Model.Person> Query(string name, string city)
         {
             return (from p in personRepo.GetAllPerson()
-                    where p.Name.StartsWith(name, StringComparison.InvariantCultureIgnoreCase) &&
-                          p.Address.City.StartsWith(city, StringComparison.InvariantCultureIgnoreCase)
+                    where (string.IsNullOrEmpty(name) || p.Name.StartsWith(name, StringComparison.InvariantCultureIgnoreCase)) &&
+                          (string.IsNullOrEmpty(city) || p.Address.City.StartsWith(city, StringComparison.InvariantCultureIgnoreCase))
                     select p);
         }
     }

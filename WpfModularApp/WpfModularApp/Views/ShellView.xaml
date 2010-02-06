@@ -2,9 +2,21 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:cal="http://www.caliburnproject.org"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <ListView ItemsSource="{Binding Presenters}">
+        <ListView.ItemsPanel>
+            <ItemsPanelTemplate>
+                <StackPanel Orientation="Horizontal"></StackPanel>
+            </ItemsPanelTemplate>
+        </ListView.ItemsPanel>
+        
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ContentControl Height="500" cal:View.Model="{Binding}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
     </ListView>
 </UserControl>
