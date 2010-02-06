@@ -7,10 +7,11 @@ using WpfModularApp.Person.Model;
 using WpfModularApp.Person.Service;
 using System.ComponentModel;
 using Caliburn.PresentationFramework.Filters;
+using Caliburn.Core.Metadata;
 
 namespace WpfModularApp.Person.ViewModels
 {
-    [Caliburn.Core.Metadata.PerRequest(typeof(PersonListViewModel))]
+    [PerRequest(typeof(PersonListViewModel))]
     public class PersonListViewModel: Presenter
     {
         private readonly IPersonQuery personQuery;
