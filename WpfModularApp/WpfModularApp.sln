@@ -1,9 +1,9 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfModularApp.Client.Core", "WpfModularApp\WpfModularApp.Client.Core.csproj", "{13A071BE-C945-4DCD-AC7C-83A515791D77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfModularApp.Product", "WpfModularApp.Service\WpfModularApp.Product.csproj", "{76DD7C75-9E77-49DD-9589-0F54BE28099F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfModularApp.Product", "WpfModularApp.Product\WpfModularApp.Product.csproj", "{76DD7C75-9E77-49DD-9589-0F54BE28099F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfModularApp.Person", "WpfModularApp.Person\WpfModularApp.Person.csproj", "{244426F9-12E2-4423-866E-C70F8069D714}"
 EndProject

@@ -117,7 +117,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WpfModularApp.Service\WpfModularApp.Product.csproj">
+    <ProjectReference Include="..\WpfModularApp.Product\WpfModularApp.Product.csproj">
       <Project>{76DD7C75-9E77-49DD-9589-0F54BE28099F}</Project>
       <Name>WpfModularApp.Product</Name>
     </ProjectReference>
