@@ -84,8 +84,8 @@ namespace WpfModularApp
             var binder = (DefaultBinder)Container.GetInstance<IBinder>();
             binder.EnableMessageConventions();
             binder.EnableBindingConventions();
-            
-            return base.CreateRootModel();
+
+            return new ViewModels.ShellViewModel(container.ResolveAll<IPresenter>());
         }
     }
 }

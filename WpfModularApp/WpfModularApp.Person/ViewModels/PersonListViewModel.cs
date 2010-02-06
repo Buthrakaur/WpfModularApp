@@ -11,7 +11,7 @@ using Caliburn.Core.Metadata;
 
 namespace WpfModularApp.Person.ViewModels
 {
-    [PerRequest(typeof(PersonListViewModel))]
+    [PerRequest(typeof(IPresenter))]
     public class PersonListViewModel: Presenter
     {
         private readonly IPersonQuery personQuery;

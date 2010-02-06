@@ -8,7 +8,7 @@ using System.ComponentModel;
 
 namespace WpfModularApp.Product.ViewModels
 {
-    [PerRequest(typeof(ProductListViewModel))]
+    [PerRequest(typeof(IPresenter))]
     public class ProductListViewModel: Presenter
     {
         private readonly Service.IProductRepository productRepo;
